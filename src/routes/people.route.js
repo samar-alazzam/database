@@ -7,7 +7,7 @@ const peopleRouter= express.Router();
 peopleRouter.get("/people" , getPeople);
 peopleRouter.get("/people/:id" , getOnePerson);
 peopleRouter.post("/people" , createPerson);
-peopleRouter.post("/people/:id" , updatePerson);
+peopleRouter.put("/people/:id" , updatePerson);
 peopleRouter.delete("/people/:id", deletePerson);
 
 async function getPeople(req , res){
