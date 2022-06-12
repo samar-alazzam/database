@@ -8,9 +8,13 @@ const app= express();
 const notFoundHandler= require("./handlers/404");
 const serverErrorHandler= require("./handlers/500");
 const peopleRotes = require("./routes/people.route.js");
+const customerRotes= require("./routes/customer.route.js");
+const orderRotes= require("./routes/order.route.js");
 
 app.use(express.json());
 app.use(peopleRotes);
+app.use(customerRotes);
+app.use(orderRotes);
 app.use('*', notFoundHandler);
 app.use(serverErrorHandler);
 
